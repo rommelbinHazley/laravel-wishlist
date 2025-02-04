@@ -184,6 +184,7 @@ trait HasWishlists
             $models[] = $type::whereIn('id', $ids)->get();
         }
 
+        $wishes = [];
         foreach ($models as $model) {
             foreach ($model as $item) {
                 $wishes[] = $item;
